@@ -47,15 +47,15 @@ def main():
             break
     #早中午判断
     nowTime = (time.localtime().tm_hour + 8 ) % 24
-    if (nowTime >= 6) & (nowTime < 8):
+    if (nowTime >= 11) & (nowTime < 15):
         templateid = "clockSign1"
         RuleId = 146
-    elif (nowTime >= 12) & (nowTime < 14):
-        templateid = "clockSign2"
-        RuleId = 147
-    elif (nowTime >= 21) & (nowTime< 22):
-        templateid = "clockSign3"
-        RuleId = 148
+#     elif (nowTime >= 12) & (nowTime < 14):
+#         templateid = "clockSign2"
+#         RuleId = 147
+#     elif (nowTime >= 21) & (nowTime< 22):
+#         templateid = "clockSign3"
+#         RuleId = 148
     else:
         print("现在时间%d点%d分，打卡时间未到！" %(nowTime,time.localtime().tm_min))
         exit(0)
